@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('api_token', 32)->unique();
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }
